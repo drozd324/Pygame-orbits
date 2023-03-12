@@ -44,8 +44,10 @@ class Particle:
             self.prev_pos = self.pos
         if self.sun == False:
             self.pos = np.add(self.pos, self.vel)
-        if self.radius > 2:
+        if self.radius > 1:
             pygame.draw.circle(screen, white, (self.pos[0], self.pos[1]), self.radius)
+        else:
+            pygame.draw.circle(screen, white, (self.pos[0], self.pos[1]), 1)
         
 particles = []
 
